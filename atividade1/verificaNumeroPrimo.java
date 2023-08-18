@@ -9,6 +9,8 @@ public class verificaNumeroPrimo{
         System.out.println("Digite o numero para verificao: ");
         Integer numero = Integer.parseInt(num.nextLine()); 
 
+        num.close();
+
         if(verificarNumeroPrimo(numero) >= 1){
             System.out.println("\nEh primo");
         }else{
