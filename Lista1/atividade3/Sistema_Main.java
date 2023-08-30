@@ -1,10 +1,12 @@
 /* 
-Situação Problema:
+ Situação Problema:
     Sistema de Gerenciamento de Estoque.
-Crie um sistema simples de gerenciamento de estoque usando objetos e classes. Cada objeto do estoque deve ter nome e quantidade.
-O sistema deve permitir ao usuário adicionar, remover, listar e atualizar a quantidade de objetos cadastrados. */
+ Crie um sistema simples de gerenciamento de estoque usando objetos e classes. Cada objeto do estoque deve ter nome e quantidade.
+ O sistema deve permitir ao usuário adicionar, remover, listar e atualizar a quantidade de objetos cadastrados. 
+*/
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Sistema_Main
 {
@@ -41,5 +43,5 @@ public class Sistema_Main
                 scanner.close();
                 break;
         }
-    }
+    }   
 }

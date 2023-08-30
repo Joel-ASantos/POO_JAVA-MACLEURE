@@ -8,11 +8,29 @@ public class Adicionar
 {
     String nome;
     int id;
+    int quantidade;
 
-    Adicionar(String nome,int id){
+    public String getNome(){
+        return nome;
+    }
+    
+    public int getID(){
+        return id;
+    }
+
+    public int getQuantidade(){
+        return quantidade;
+    }
+
+    public void SetNome(){
         this.nome = nome;
+    }
+
+    public void SetID(){
         this.id = id;
     }
 
-    //Continuar amanhã
+    public void SetQuantidade(){
+        this.quantidade = quantidade;
+    }
 }
