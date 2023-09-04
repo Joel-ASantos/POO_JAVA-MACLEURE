@@ -10,13 +10,12 @@ import java.util.List;
 
 public class Sistema_Main
 {
-    public static Scanner scanner = new Scanner(System.in);
-    Estoque estoque = new Estoque();
-
-
     public static void main(String[] args)
     {
-        int exec=0;
+        Estoque estoque = new Estoque();
+        Scanner scanner = new Scanner(System.in);
+
+        int exec = 0;
         
         while(exec != 5)
         {
@@ -25,44 +24,73 @@ public class Sistema_Main
             System.out.println("3- Listar");
             System.out.println("4- Atualizar a quantidade");
             System.out.println("5-Encerrar");
+            System.out.println("Digite: ");
+            scanner.nextLine();
+        }
 
-            switch(exec)
-            {
-                case 1:
-                    System.out.println("Adicionando\n");
+        switch(exec)
+        {
+            case 1:
+                System.out.println("Adicionando\n");
 
-                    System.out.print("Digite o código do item: ");
-                    int ID = scanner.nextInt();
+                System.out.print("Digite o código do item: ");
+                int ID = scanner.nextInt();
 
-                    System.out.print("Digite o nome do item: ");
-                    String nome = scanner.nextLine();
+                System.out.print("Digite o nome do item: ");
+                String nome = scanner.nextLine();
                     
-                    System.out.print("Digite a quantidade do item: ");
-                    int qtd = scanner.nextInt();
+                System.out.print("Digite a quantidade do item: ");
+                int qtd = scanner.nextInt();
 
-                break;
+                Itens item = new Itens(nome,ID,qtd);
+                estoque.InserindoValores(item);
 
-                case 2:
-                    System.out.println("Removendo\n");
+                scanner.close();
+            break;
 
-                    System.out.print("Digite o código do item a ser removido: ");
-                    ID = scanner.nextInt();
+            case 2:
+                System.out.println("Removendo\n");
 
-                break;
+                System.out.print("Digite o código do item a ser removido: ");
+                ID = scanner.nextInt();
 
-                case 3:
-                    System.out.println("Listando\n");
-                break;
+                scanner.close();
+                estoque.Remover(ID);
+            break;
 
-                case 4:
-                    System.out.println("Atualizando dados\n");
-                break;
+            case 3:
+                System.out.println("Listando\n");
 
-                case 5:
-                    exec = 5;
-                    System.out.println("Encenrrando");
-                break;
-            }
+                System.out.println("Itens no estoque:");
+
+                List<Itens> itens = estoque.Lista();
+                    
+                for (Itens currentItem : itens) {
+                    System.out.println("Código: " + currentItem.getID());
+                    System.out.println("Nome: " + currentItem.getNome());       
+                }
+
+            break;
+
+            case 4:
+                System.out.println("Atualizando dados\n");
+
+                System.out.print("Digite o código do item a ser atualizado: ");
+                int uptadeID = scanner.nextInt();
+
+                System.out.print("Digite a nova quantidade: ");
+                int novaQuantidade = scanner.nextInt();
+
+                estoque.atualizar(uptadeID, novaQuantidade);
+                System.out.println("Quantidade atualizada com sucesso!");
+                
+                scanner.close();
+            break;
+
+            case 5:
+                exec = 5;
+                System.out.println("Encenrrando");
+            break;
         }
     }
 }
