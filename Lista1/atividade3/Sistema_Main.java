@@ -12,7 +12,7 @@ public class Sistema_Main
 {
     public static void main(String[] args)
     {
-        Estoque estoque = new Estoque();
+        estoque estoque = new estoque();
         Scanner scanner = new Scanner(System.in);
 
         int exec = 0;

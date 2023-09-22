@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Estoque
+public class estoque
 {
     List<Itens> obj;
 
-    Estoque(){
+    estoque(){
         this.obj = new ArrayList<Itens>();
     }
         
