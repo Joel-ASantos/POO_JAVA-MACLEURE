@@ -42,7 +42,6 @@ public class paciente extends Pessoa{
         this.quadro_paciente = quadro_paciente;
     }
 
-
     @Override
     public String toString() {
         return "{" +
