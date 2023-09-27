@@ -1,4 +1,4 @@
-package Lista2.atividade6;
+package Lista2.atividade6.Clinica;
 
 public class Enfermeiro {
     String coren;
