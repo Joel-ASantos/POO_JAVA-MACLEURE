@@ -10,7 +10,7 @@ package Lista2.atividade6;
  * OBS: Esse arquivo é provisório.
  */
 
-public class provisorio {
+public class Clinica_Hospital {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
