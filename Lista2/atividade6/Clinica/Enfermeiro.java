@@ -1,6 +1,6 @@
 package Lista2.atividade6.Clinica;
 
-public class Enfermeiro {
+public class Enfermeiro extends Pessoa {
     String coren;
     float salario;
     String departamento;

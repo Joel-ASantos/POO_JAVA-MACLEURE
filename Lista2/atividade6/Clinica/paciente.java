@@ -1,10 +1,13 @@
 package Lista2.atividade6.Clinica;
 
-public class paciente {
+public class paciente extends Pessoa {
     private String cartão_do_sus;
     private String plano_de_saude;
     private String quadro_paciente;
     
+    public paciente() {
+    }
+
     public paciente( String cartao_do_sus, String plano_de_saude, String quadro_paciente) {
         this.cartão_do_sus = cartao_do_sus;
         this.plano_de_saude = plano_de_saude;

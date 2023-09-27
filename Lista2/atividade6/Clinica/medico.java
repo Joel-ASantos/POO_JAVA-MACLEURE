@@ -1,6 +1,6 @@
 package Lista2.atividade6.Clinica;
 
-public class medico {
+public class medico extends Pessoa {
     String Crm;
     float Salario;
 

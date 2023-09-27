@@ -1,8 +1,18 @@
 package Lista2.atividade6.Clinica;
 
 public class Pessoa {
-    String nome, cpf,telefone;
-    Integer idade;
+    protected String nome, cpf,telefone;
+    protected Integer idade;
+
+    public Pessoa(){    
+    }
+
+    public Pessoa(String nome, String cpf, String telefone, Integer idade) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.idade = idade;
+    }
 
     public String getNome() {
         return nome;
