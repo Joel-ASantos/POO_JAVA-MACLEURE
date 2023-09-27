@@ -1,9 +1,18 @@
 package Lista2.atividade6.Clinica;
 
-public class Enfermeiro extends Pessoa {
-    String coren;
-    float salario;
-    String departamento;
+public class Enfermeiro extends Empregado {
+    private String coren;
+    private float salario;
+
+    public Enfermeiro(String nome, String cpf, String telefone, Integer idade,String setor,String coren, float salario) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.idade = idade;
+        this.setor = setor;
+        this.coren = coren;
+        this.salario = salario;
+    }
 
     public String getCoren() {
         return coren;
@@ -21,11 +30,17 @@ public class Enfermeiro extends Pessoa {
         this.salario = salario;
     }
 
-    public String getDepartamento() {
-        return departamento;
+    @Override
+    public String toString() {
+        return "{" +
+            " nome='" + getNome() + "'" +
+            " idade='" + getIdade() + "'" +
+            " telefone='" + getTelefone() + "'" +
+            " cpf='" + getCpf() + "'" +
+            " coren='" + getCoren() + "'" +
+            ", salario='" + getSalario() + "'" +
+            ", setor='" + getSetor() + "'" +
+            "}";
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
-    }
 }

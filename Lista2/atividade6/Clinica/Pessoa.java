@@ -1,6 +1,6 @@
 package Lista2.atividade6.Clinica;
 
-public class Pessoa {
+public class Pessoa  {
     protected String nome, cpf,telefone;
     protected Integer idade;
 
@@ -45,4 +45,15 @@ public class Pessoa {
     public void setIdade(Integer idade) {
         this.idade = idade;
     }
+
+    @Override
+    public String toString() {
+        return "{" +
+            " nome='" + getNome() + "'" +
+            ", cpf='" + getCpf() + "'" +
+            ", telefone='" + getTelefone() + "'" +
+            ", idade='" + getIdade() + "'" +
+            "}";
+    }
+    
 }
